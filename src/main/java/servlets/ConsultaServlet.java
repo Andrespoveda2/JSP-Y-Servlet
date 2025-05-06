@@ -19,7 +19,8 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
 import java.io.IOException;
 import java.util.List;
-import modelo.Usuario;
+
+import com.miproyecto.modelo.Usuario;
 
 @WebServlet(name = "ConsultaServlet", urlPatterns = {"/consulta"})
 public class ConsultaServlet extends HttpServlet {

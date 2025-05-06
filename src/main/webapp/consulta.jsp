@@ -8,6 +8,12 @@
 <%@page import="com.miproyecto.modelo.Usuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Consulta</title>
+    <link rel="stylesheet" type="text/css" href="styles/estilos.css">
+</head>
+
 <html>
     <body>
 <div class="container">

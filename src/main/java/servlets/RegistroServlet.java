@@ -25,7 +25,8 @@ import jakarta.servlet.http.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import modelo.Usuario;
+
+import com.miproyecto.modelo.Usuario;
 
 @WebServlet(name = "RegistroServlet", urlPatterns = {"/registro"})
 public class RegistroServlet extends HttpServlet {
