@@ -7,16 +7,13 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    
-        <body>
-            <div class="container">
-                <h1>Registro de Usuario</h1>
-                <% if (request.getAttribute("mensaje") != null) { %>
-            <div class="message">
-                <%= request.getAttribute("mensaje") %>
+    <body>
+        <div class="container">
+            <h1>Bienvenido al Sistema de Registro de Usuarios</h1>
+            <div class="menu">
+                <a href="registro">Registrar Usuario</a>
+                <a href="consulta">Consultar Usuarios</a>
             </div>
-        <% } %>
-            <form action="registro" method="POST"> </form>
-            </div>
-        </body>
+        </div>
+    </body>
 </html>

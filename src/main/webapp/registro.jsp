@@ -19,7 +19,20 @@
                 <%= request.getAttribute("mensaje") %>
             </div>
                 <% } %>
-            <form action="registro" method="POST"> </form>
+         
+            <form action="registro" method="POST">
+                <label>Nombre:</label>
+                <input type="text" name="nombre" required><br>
+                <label>Apellido:</label>
+                <input type="text" name="apellido" required><br>
+                <label>Email:</label>
+                <input type="email" name="email" required><br>
+                <label>Contraseña:</label>
+                <input type="password" name="password" required><br>
+                <button type="submit">Registrar</button>
+            </form>
+
+            
             </div>
     </body>
 </html>

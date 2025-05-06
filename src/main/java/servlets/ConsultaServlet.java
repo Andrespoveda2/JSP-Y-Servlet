@@ -4,22 +4,33 @@
  */
 package servlets;
 
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.io.PrintWriter;
+
 
 /**
  *
  * @author SENA
  */
-            @WebServlet(name = "ConsultaServlet", urlPatterns = {"/consulta"})
-    public class ConsultaServlet extends HttpServlet {
-        @Override
-        protected void doGet(HttpServletRequest request, HttpServletResponse response)
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.*;
+import java.io.IOException;
+import java.util.List;
+import modelo.Usuario;
+
+@WebServlet(name = "ConsultaServlet", urlPatterns = {"/consulta"})
+public class ConsultaServlet extends HttpServlet {
+
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-}
+        HttpSession session = request.getSession();
+        List<Usuario> listaUsuarios = (List<Usuario>) session.getAttribute("usuarios");
+
+        request.setAttribute("usuarios", listaUsuarios);
+        request.getRequestDispatcher("consulta.jsp").forward(request, response);
+    }
 }
