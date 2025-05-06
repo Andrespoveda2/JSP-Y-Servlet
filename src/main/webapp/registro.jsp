@@ -12,6 +12,14 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+            <div class="container">
+                <h1>Registro de Usuario</h1>
+                <% if (request.getAttribute("mensaje") != null) { %>
+            <div class="message">
+                <%= request.getAttribute("mensaje") %>
+            </div>
+                <% } %>
+            <form action="registro" method="POST"> </form>
+            </div>
     </body>
 </html>
